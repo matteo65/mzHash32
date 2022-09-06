@@ -20,6 +20,6 @@ It also has a good Avalanche Effect property: even a minimal differences (1 bit)
 #### java.util.Arrays.hashCode()
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/java_hash.png)
   
-#### mzHash32.hash()
+#### mzHash32()
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzh32_distributions.png)
 
