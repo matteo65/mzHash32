@@ -39,7 +39,7 @@ Number as strings from "1234567890123456789" to "1234567890223456788" | 100,000,
 Strings from "abcdefg1234567890123456789hijklmn" to "abcdefg1234567890223456788hijklmn" | 100,000,000 | 1,155,171| **1,125,889** | **1,152,600**| **1,037,151** 
 Numbers as strings from "0" to "999999999"         |1,000,000,000| 107,882,641        |**107,105,249**|**107,822,463**|110,287,893
 Numbers as strings from "aaaa0aaaa" to "aaaa1999999999aaaa"|2,000,000,000| 401,068,994 |**400,972,197**|**401,043,716**|**391,119,332**
-Hex numbers as string from "0" to "7FFFFFFE"| 2,147,483,647| 457,545,699| **457,447,653**|**457,465,265**|?
+Hex numbers as string from "0" to "7FFFFFFE"| 2,147,483,647| 457,545,699| **457,447,653**|**457,465,265**|460,825,702
 
 ## Vulnerability
 mzHash32, like most non-cryptographic functions, is non-secure because it is not specifically designed to be difficult to reverse by an adversary, making it unsuitable for cryptographic purposes. Its use is instead recommended in all other contexts where hash functions are used.  
