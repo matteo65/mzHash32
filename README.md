@@ -21,7 +21,7 @@ It also has a good Avalanche Effect property: even a minimal differences (1 bit)
 mzHash32 produces a very low number of collisions for each reasonably large number of distinct values; it is close to the collisions number of a Universal Hash Function.  
 The number is given by the formula _n-m*(1-((m-1)/m)^n)_ where _n_ is the number of input values, _m_ is the number of all possible hash values (2^32 or 2^64).  
 
-#### Number of collisions for strings as input
+#### Number of collisions for string inputs
 
 Data input                                         |   #Vaues    |#Expected Collisions|    mzHash     |   Murmur3     |     XX
 :---                                               |         ---:|                ---:|           ---:|           ---:|    ---:
