@@ -35,4 +35,5 @@ File first_million_primes.txt                      |   1,000,000 |       116    
 File random_64bit_signed_numbers.txt               |   1,000,000 |       116          |        **105**|        **110**|      143
 Numbers in english from "zero" to "nine million nine hundred ninety-nine thousand nine hundred ninety-nine"|10,000,000| 11,633 | 11,735 | 11,672 | **11,474**
 Numbers in english from "five hundred thirty-nine billion three hundred twenty million seven hundred one thousand four hundred eighty-three" to "five hundred thirty-nine billion four hundred twenty million seven hundred one thousand four hundred eighty-two" | 100,000,000 | 1,155,171 | **1,152,258** | **1,155,029** | **1,154,135**
+Number as strings from "1234567890123456789" to "1234567890223456788" | 100,000,000 | 1,155,171 | **0** | 1,155,789|   **808,693**
 Numbers as strings from "0" to "999999999"         |1,000,000,000| 107,882,641        |**107,105,249**|**107,822,463**|110,287,893
