@@ -45,6 +45,7 @@ Hex numbers as string from "0" to "7FFFFFFE"| 2,147,483,647| 457,545,699| **457,
 Data input                                         |   #Vaues    |#Expected Collisions|    mzHash     |   Murmur3     |     XX
 :---                                               |         ---:|                ---:|           ---:|           ---:|    ---:
 Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 05F5E0FF|100,000,000| 1,155,171| **1,155,140** | **1,154,653**| 1,411,483
+Binary 24 bytes [b,b\*3,b\*5,b\*7,b\*11,b\*13], b from 00000000 to 05F5E0FF|100,000,000| 1,155,171| **1,154,633** | **1,154,542**| 1,160,003
 
 ## Vulnerability
 mzHash32, like most non-cryptographic functions, is non-secure because it is not specifically designed to be difficult to reverse by an adversary, making it unsuitable for cryptographic purposes. Its use is instead recommended in all other contexts where hash functions are used.  
