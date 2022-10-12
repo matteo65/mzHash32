@@ -38,3 +38,13 @@ Numbers in english from "five hundred thirty-nine billion three hundred twenty m
 Number as strings from "1234567890123456789" to "1234567890223456788" | 100,000,000 | 1,155,171 | **1,154,640** | 1,155,789|   **808,693**
 Strings from "abcdefg1234567890123456789hijklmn" to "abcdefg1234567890223456788hijklmn" | 100,000,000 | 1,155,171| **1,125,889** | **1,152,600**| **1,037,151** 
 Numbers as strings from "0" to "999999999"         |1,000,000,000| 107,882,641        |**107,105,249**|**107,822,463**|110,287,893
+
+## Vulnerability
+mzHash32, like most non-cryptographic functions, is non-secure because it is not specifically designed to be difficult to reverse by an adversary, making it unsuitable for cryptographic purposes. Its use is instead recommended in all other contexts where hash functions are used.  
+Like other non-cryptographic functions, its security depends on the secrecy of the possibly used seed.  
+
+
+## Portability
+It is minimalist, elegant, straightforward and can be easily written in virtually any programming language. 
+It produces the same result with x86 and x64 (or different) platforms.
+Currently C and Java versions are available.  
