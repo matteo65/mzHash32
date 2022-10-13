@@ -44,6 +44,7 @@ Hex numbers as string from "0" to "7FFFFFFE"| 2,147,483,647| 457,545,699| **457,
 #### Number of collisions for binary inputs
 Data input                                         |   #Vaues    |#Expected Collisions|    mzHash     |   Murmur3     |     XX
 :---                                               |         ---:|                ---:|           ---:|           ---:|    ---:
+Bynary 40 bytes [b,b,b,b,b,b,b,b,b,b] b from FF676980 to FFFFFFFF| 10,000,000|11,633|**11,295**| 11,695| 11,846
 Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 05F5E0FF|100,000,000| 1,155,171| **1,155,140** | **1,154,653**| 1,411,483
 Binary 24 bytes [b,b\*3,b\*5,b\*7,b\*11,b\*13], b from 00000000 to 05F5E0FF|100,000,000| 1,155,171| **1,154,633** | **1,154,542**| 1,160,003
 
