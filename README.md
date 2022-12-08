@@ -2,8 +2,10 @@
 Strong, fast, simple non-cryptography function
 
 ```java
-public static int mzHash32(final byte[] data, int pos, int length) {
-	int hash = 0;
+public static int mzHash32(final byte[] data, int pos, int length, int seed) {
+	int hash = 0x95DE1432 ^ seed;
+	for(int i = 0; i < length; i++)
+		hash = (0xA8657C5B * (i + data[pos + i]))  ^ (h << 2) ^ (h >>> 2);
 	return hash;
 }
 ```
