@@ -56,7 +56,7 @@ Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 05F5E0FF|1,000,000,000| 107,88
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzhash32speed.jpg)
 
 ## Vulnerability
-mzHash32, like most non-cryptographic functions, is non-secure because it is not specifically designed to be difficult to reverse by an adversary, making it unsuitable for cryptographic purposes. Its use is instead recommended in all other contexts where hash functions are used.  
+MzHash32, like most non-cryptographic functions, is non-secure because it is not specifically designed to be difficult to reverse by an adversary, making it unsuitable for cryptographic purposes. Its use is instead recommended in all other contexts where hash functions are used.  
 Like other non-cryptographic functions, its security depends on the secrecy of the possibly used seed.  
 
 ## Portability
@@ -65,4 +65,4 @@ It produces the same result with x86 and x64 (or different) platforms.
 Currently C and Java versions are available.
 
 ## Conclusion
-MzHash demonstrates to have an excellet quality of the dispersion, close to an ideal Universal Hash Function. It is simple, portable and produces same results in all platform (x86 and x64). On the other hand it is slower than XX and Murmur3. If the goal is the quality of the dispersion and have the same result on x86 and x64 platforms, mzHash is certainly the algorithm to choose!
+MzHash32 demonstrates to have an excellet quality of the dispersion, close to an ideal Universal Hash Function. It is simple, portable and produces same results in all platform (x86 and x64). On the other hand it is slower than XX and Murmur3. If the goal is the quality of the dispersion and have the same result on x86 and x64 platforms, mzHash32 is certainly the function to choose!
