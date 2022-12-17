@@ -33,16 +33,15 @@
  * For more information, please refer to <https://unlicense.org>
  * 
  */
-#include <stdlib.h> // size_t
 #include <stdint.h> // uint32_t
 
 #include "mzhash32.h"
 
-uint32_t mzhash32(const int8_t *data, size_t length, uint32_t seed)
+uint32_t mzhash32(const int8_t *data, int length, uint32_t seed)
 {
 	uint32_t hash = 0x95DE1432 ^ seed;
 		
-	for(size_t i = 0; i < length; i++)
+	for(int i = 0; i < length; i++)
 		hash = 0xA8657C5B * (i + data[i]) ^ (hash << 2) ^ (hash >> 2);
 		
 	return hash;
