@@ -1,5 +1,5 @@
 /**
- * mzhash32
+ * mzHash32
  * 
  * Strong, fast, simple, non-cryptographic 32-bit hash function
  * 
