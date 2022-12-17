@@ -34,7 +34,6 @@
  * 
  */
 #include <stdint.h> // uint32_t
-
 #include "mzhash32.h"
 
 uint32_t mzhash32(const int8_t *data, int length, uint32_t seed)
