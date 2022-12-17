@@ -1,5 +1,5 @@
 # mzHash32
-Strong, fast, simple non-cryptography hash function
+Strong, fast, simple, non-cryptography hash function
 
 ```java
 public static int mzHash32(final byte[] data, int pos, int length, int seed) {
