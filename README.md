@@ -34,7 +34,7 @@ File words_it.txt                                  |     117,558 |         2    
 File words_en_es_it_latin.txt                      |     315,198 |        12          |          **9**|          **9**|      **9**
 File words_and_numbers.txt                         |     429,187 |        21          |         **17**|         **20**|     **19**
 File first_million_primes.txt                      |   1,000,000 |       116          |        **109**|            118|     **85**
-File random_64bit_signed_numbers.txt               |   1,000,000 |       116          |        **105**|        **110**|      143
+File random_64_signed_nums.txt                     |   1,000,000 |       116          |        **105**|        **110**|      143
 Numbers in english from "zero" to "nine million nine hundred ninety-nine thousand nine hundred ninety-nine"|10,000,000| 11,633 | 11,735 | 11,672 | **11,474**
 Numbers in english from "five hundred thirty-nine billion three hundred twenty million seven hundred one thousand four hundred eighty-three" to "five hundred thirty-nine billion four hundred twenty million seven hundred one thousand four hundred eighty-two" | 100,000,000 | 1,155,171 | **1,152,258** | **1,155,029** | **1,154,135**
 Number as strings from<br>"1234567890123456789" to "1234567890223456788" | 100,000,000 | 1,155,171 | **1,154,640** | 1,155,789|   **808,693**
