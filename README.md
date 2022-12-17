@@ -13,10 +13,10 @@ public static int mzHash32(final byte[] data, int start, int length, int seed) {
 It has an absolutely uniform, chaotic distribution of hash values independent of the number, length and type of input values.  
 It also has a good Avalanche Effect property: even a minimal differences (1 bit) of input values produces very different hash values.  
 
-#### java.util.Arrays.hashCode()
+#### java.util.Arrays.hashCode(): suboptimal dispersion 
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/java_hash.png)
   
-#### mzHash32()
+#### mzHash32(): optimal dispersion
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzh32_distributions.png)
 
 ## Minimum number of collisions
