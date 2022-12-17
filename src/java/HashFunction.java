@@ -20,7 +20,7 @@
  */
 public class HashFunction {
 	
-	public static int maHash32(byte[] data, int start, int length, int seed) {	
+	public static int mzHash32(byte[] data, int start, int length, int seed) {	
 		int hash = 0x95DE1432 ^ seed;
 		
 		for(int i = 0; i < length; i++)
@@ -29,16 +29,16 @@ public class HashFunction {
 		return hash;
 	}
 	
-	public static int maHash32(byte[] data, int start, int length) {
-		return maHash32(data, start, length, 0);
+	public static int mzHash32(byte[] data, int start, int length) {
+		return mzHash32(data, start, length, 0);
 	}
 	
-	public static int maHash32(byte[] data) {
-		return maHash32(data, 0, data.length, 0);
+	public static int mzHash32(byte[] data) {
+		return mzHash32(data, 0, data.length, 0);
 	}
 	
-	public static int maHash32(byte[] data, int seed) {	
-		return maHash32(data, 0, data.length, seed);
+	public static int mzHash32(byte[] data, int seed) {	
+		return mzHash32(data, 0, data.length, seed);
 	}
 
 }
