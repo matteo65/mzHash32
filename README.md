@@ -5,7 +5,7 @@ Strong, fast, simple, non-cryptography hash function
 public static int mzHash32(final byte[] data, int start, int length, int seed) {
 	int hash = 0x95DE1432 ^ seed;
 	for(int i = 0; i < length; i++)
-		hash = (0xA8657C5B * (i + data[start + i])) ^ (h << 2) ^ (h >>> 2);
+		hash = (0xA8657C5B * (i + data[start + i])) ^ (hash << 2) ^ (hash >>> 2);
 	return hash;
 }
 ```
