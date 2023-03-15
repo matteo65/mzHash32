@@ -36,8 +36,8 @@ File words_and_numbers.txt                         |     429,187 |        21    
 File first_million_primes.txt                      |   1,000,000 |       116          |        **109**|            118|     **85**
 File random_64_signed_nums.txt                     |   1,000,000 |       116          |        **105**|        **110**|      143
 Numbers in english from "zero" to "nine million nine hundred ninety-nine thousand nine hundred ninety-nine"|10,000,000| 11,633 | 11,735 | 11,672 | **11,474**
-Numbers in english from "five hundred thirty-nine billion three hundred twenty million seven hundred one thousand four hundred eighty-three" to "five hundred thirty-nine billion four hundred twenty million seven hundred one thousand four hundred eighty-two" | 100,000,000 | 1,155,171 | **1,152,258** | **1,155,029** | **1,154,135**
 File [rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt) dictionary of common passwords|14,442,069|24,254|**168,561**|168,887|168,563
+Numbers in english from "five hundred thirty-nine billion three hundred twenty million seven hundred one thousand four hundred eighty-three" to "five hundred thirty-nine billion four hundred twenty million seven hundred one thousand four hundred eighty-two" | 100,000,000 | 1,155,171 | **1,152,258** | **1,155,029** | **1,154,135**
 Number as strings from<br>"1234567890123456789" to "1234567890223456788" | 100,000,000 | 1,155,171 | **1,154,640** | 1,155,789|   **808,693**
 Strings from<br>"abcdefg1234567890<br>123456789hijklmn" to "abcdefg1234567890<br>223456788hijklmn" | 100,000,000 | 1,155,171| **1,125,889** | **1,152,600**| **1,037,151** 
 Numbers as strings from "0" to "999999999"         |1,000,000,000| 107,882,641        |**107,105,249**|**107,822,463**|110,287,893
