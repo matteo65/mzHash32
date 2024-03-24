@@ -56,5 +56,90 @@ public class HashFunct32 {
 		return mzHash32(data, 0, data.length, seed);
 	}
 
+	public static int mzHash32(byte b, int seed) {
+		int hash = 0x95DE1432 ^ seed;
+		return 0xA8657C5B * b ^ (hash << 2) ^ (hash >>> 2);
+	}
+	
+	public static int mzHash32(byte b) {
+		return 0xA8657C5B * b ^ 0x720FD5C4;
+	}
+	
+	public static int mzHash32(short s, int seed) {
+		int hash = 0x95DE1432 ^ seed;
+		
+		hash = 0xA8657C5B * (byte)s ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xA8657C5B * (1 + (byte)(s >> 8)) ^ (hash << 2) ^ (hash >>> 2);
+		
+		return hash;
+	}
+	
+	public static int mzHash32(short s) {
+		return mzHash32(s, 0);
+	}
+	
+	public static int mzHash32(int i, int seed) {
+		int hash = 0x95DE1432 ^ seed;
+		
+		hash = 0xA8657C5B * (byte)i ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xA8657C5B * (1 + (byte)(i >> 8)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xA8657C5B * (2 + (byte)(i >> 16)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xA8657C5B * (3 + (byte)(i >> 24)) ^ (hash << 2) ^ (hash >>> 2);
+		
+		return hash;
+	}
+	
+	public static int mzHash32(int i) {
+		return mzHash32(i, 0);
+	}
+	
+	public static int mzHash32(long l, int seed) {
+		int hash = 0x95DE1432 ^ seed;
+		
+		hash = 0xA8657C5B * (byte)l ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xA8657C5B * (1 + (byte)(l >> 8)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xA8657C5B * (2 + (byte)(l >> 16)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xA8657C5B * (3 + (byte)(l >> 24)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xA8657C5B * (4 + (byte)(l >> 32)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xA8657C5B * (5 + (byte)(l >> 40)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xA8657C5B * (6 + (byte)(l >> 48)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xA8657C5B * (7 + (byte)(l >> 56)) ^ (hash << 2) ^ (hash >>> 2);
+		
+		return hash;
+	}
+	
+	public static int mzHash32(long l) {
+		return mzHash32(l, 0);
+	}
+	
+	public static int mzHash32(char c, int seed) {
+		int hash = 0x95DE1432 ^ seed;
+		
+		hash = 0xA8657C5B * (byte)c ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xA8657C5B * (1 + (byte)(c >> 8)) ^ (hash << 2) ^ (hash >>> 2);
+		
+		return hash;
+	}
+	
+	public static int mzHash32(char c) {
+		return mzHash32(c, 0);
+	}
+	
+	public static int mzHash32(String str, int seed) {
+		return mzHash32(str.getBytes(), seed);
+	}
+	
+	public static int mzHash32(String str) {
+		return mzHash32(str.getBytes(), 0);
+	}
+	
+	public static int mzHash32(boolean b, int seed) {
+		return b ? mzHash32(1, seed) : mzHash32(0, seed);
+	}
+	
+	public static int mzHash32(boolean b) {
+		return b ? 0x140B7AE0 : 0x247957A5;
+	}
+	
 }
 
