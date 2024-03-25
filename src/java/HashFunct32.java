@@ -34,6 +34,8 @@
  * 
  */
 public class HashFunct32 {
+
+	private HashFunct32() {}
 	
 	public static int mzHash32(byte[] data, int start, int length, int seed) {	
 		int hash = 0x95DE1432 ^ seed;
