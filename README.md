@@ -14,7 +14,7 @@ It has an absolutely uniform, chaotic distribution of hash values independent of
 It also has a good Avalanche Effect property: even a minimal differences (1 bit) of input values produces very different hash values.  
 
 #### java.lang.String.hashCode(): suboptimal dispersion 
-![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/java_hash.png)
+![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/java_hash.png)<br>
 Hash funtion: java.lang.String.hashCode()<br>
 Source file: words_en.txt<br>
 Distinct words: 65503<br>
@@ -22,7 +22,7 @@ Collisions: 118 (expected 0.4994)<br>
 Monte Carlo Pi: 3.251076 (error 3.48%)
   
 #### mzHash32(): optimal dispersion
-![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzh32_distributions.png)
+![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzh32_distributions.png)<br>
 Hash funtion: mzHash32()<br>
 Source file: words_en.txt<br>
 Distinct words: 65503<br>
