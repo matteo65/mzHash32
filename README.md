@@ -15,6 +15,7 @@ It also has a good Avalanche Effect property: even a minimal differences (1 bit)
 
 #### java.lang.String.hashCode(): suboptimal dispersion 
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/java_hash.png)
+
 Hash funtion: java.lang.String.hashCode().
 Source file: words_en.txt.
 Distinct words: 65503.
@@ -23,6 +24,7 @@ Monte Carlo Pi: 3.251076 (error 3.48%).
   
 #### mzHash32(): optimal dispersion
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzh32_distributions.png)
+
 Hash funtion: mzHash32().
 Source file: words_en.txt.
 Distinct words: 65503.
