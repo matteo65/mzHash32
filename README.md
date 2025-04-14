@@ -35,7 +35,7 @@ The number is given by the formula _n-m*(1-((m-1)/m)^n)_ where _n_ is the number
 
 #### Number of collisions for string inputs
 
-Data input                                         |   #Vaues    |#Expected Collisions|  mzHash   | Murmur3 |     XX
+Data input                                         |   #Vaues    |#Expected Collisions|  mzHash32 | Murmur3 |     XX
 :---                                               |         ---:|                ---:|       ---:|     ---:|    ---:
 File words_en.txt                                  |      65,503 |         0.5        |          0|        0|       0
 File words_es.txt                                  |      74,571 |         0.6        |          1|        2|       0
@@ -55,13 +55,13 @@ Numbers as strings from "aaaa0aaaa" to "aaaa1999999999aaaa"|2,000,000,000| 401,0
 Hex numbers as string from "0" to "7FFFFFFE"| 2,147,483,647| 457,545,699| 456,687,411|457,465,265|460,825,702
 
 #### Number of collisions for binary inputs
-Data input                                         |   #Vaues    |#Expected Collisions|    mzHash     |   Murmur3     |     XX
-:---                                               |         ---:|                ---:|           ---:|           ---:|    ---:
-Binary 32 bytes random                             |    100,000  |                 1  |     **1**     |   **0**       |    2 
-Binary 40 bytes [b,b,b,b,b,b,b,b,b,b] b from FF676980 to FFFFFFFF| 10,000,000|11,633|**11,295**| 11,695| 11,846
-Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 05F5E0FF|100,000,000| 1,155,171| **1,155,140** | **1,154,653**| 1,411,483
-Binary 24 bytes [b,b\*3,b\*5,b\*7,b\*11,b\*13], b from 00000000 to 05F5E0FF|100,000,000| 1,155,171| **1,154,633** | **1,154,542**| 1,160,003
-Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 05F5E0FF|1,000,000,000| 107,882,641| 107,908,082 | **107,880,319**| 113,834,210
+Data input                                         |   #Vaues    |#Expected Collisions|  mzHash32 | Murmur3 |   XX
+:---                                               |         ---:|                ---:|       ---:|     ---:|  ---:
+Binary 32 bytes random                             |    100,000  |                 1  |     2     |   0     |    2 
+Binary 40 bytes [b,b,b,b,b,b,b,b,b,b] b from FF676980 to FFFFFFFF| 10,000,000|11,633|11,676| 11,695| 11,846
+Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 05F5E0FF|100,000,000| 1,155,171| 1,157,305 | 1,154,653| **1,411,483**
+Binary 24 bytes [b,b\*3,b\*5,b\*7,b\*11,b\*13], b from 00000000 to 05F5E0FF|100,000,000| 1,155,171| 1,154,367 | 1,154,542| 1,160,003
+Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 05F5E0FF|1,000,000,000| 107,882,641| 107,904,990 | 107,880,319| **113,834,210**
 
 ## Speed
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzhash32speed.jpg)
