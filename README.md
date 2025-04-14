@@ -3,9 +3,9 @@ Strong, fast, simple, non-cryptography hash function
 
 ```java
 public static int mzHash32(final byte[] data, int start, int length, int seed) {
-	int hash = 0x95DE1432 ^ seed;
+	int hash = seed;
 	for(int i = 0; i < length; i++)
-		hash = (0xA8657C5B * (i + data[start + i])) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + i + data[start + i]) ^ (hash << 2) ^ (hash >>> 2);
 	return hash;
 }
 ```
@@ -35,16 +35,16 @@ The number is given by the formula _n-m*(1-((m-1)/m)^n)_ where _n_ is the number
 
 #### Number of collisions for string inputs
 
-Data input                                         |   #Vaues    |#Expected Collisions|    mzHash     |   Murmur3     |     XX
-:---                                               |         ---:|                ---:|           ---:|           ---:|    ---:
-File words_en.txt                                  |      65,503 |         0          |          **0**|          **0**|      **0**
-File words_es.txt                                  |      74,571 |         1          |          **0**|              2|      **0**
-File words_latin.txt                               |      80,007 |         1          |          **1**|          **1**|      **1**
-File words_it.txt                                  |     117,558 |         2          |          **0**|          **0**|      **2**
-File words_en_es_it_latin.txt                      |     315,198 |        12          |          **9**|          **9**|      **9**
-File words_and_numbers.txt                         |     429,187 |        21          |         **17**|         **20**|     **19**
-File first_million_primes.txt                      |   1,000,000 |       116          |        **109**|            118|     **85**
-File random_64_signed_nums.txt                     |   1,000,000 |       116          |        **105**|        **110**|      143
+Data input                                         |   #Vaues    |#Expected Collisions|  mzHash   | Murmur3 |     XX
+:---                                               |         ---:|                ---:|       ---:|     ---:|    ---:
+File words_en.txt                                  |      65,503 |         0.5        |          0|        0|       0
+File words_es.txt                                  |      74,571 |         0.6        |          1|        2|       0
+File words_latin.txt                               |      80,007 |         0.7        |          1|        1|       1
+File words_it.txt                                  |     117,558 |         1.6        |          1|        0|       2
+File words_en_es_it_latin.txt                      |     315,198 |        11.6        |         13|        9|       9
+File words_and_numbers.txt                         |     429,187 |        21.4        |         23|       20|      19
+File first_million_primes.txt                      |   1,000,000 |       116.4        |        113|      118|  **85**
+File random_64_signed_nums.txt                     |   1,000,000 |       116.4        |        119|      110|  **143**
 Numbers in english from **"zero"** to **"nine million nine hundred ninety-nine thousand nine hundred ninety-nine"**|10,000,000| 11,633 | 11,735 | 11,672 | **11,474**
 File [rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt) dictionary of common passwords|14,344,391|23,927|**23,908**|24,206|**23,895**
 Numbers in english from **"five hundred thirty-nine billion three hundred twenty million seven hundred one thousand four hundred eighty-three"** to **"five hundred thirty-nine billion four hundred twenty million seven hundred one thousand four hundred eighty-two"** | 100,000,000 | 1,155,171 | **1,152,258** | **1,155,029** | **1,154,135**
