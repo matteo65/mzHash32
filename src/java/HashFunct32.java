@@ -1,5 +1,5 @@
 /**
- * mzHash32
+ * mzhash32
  * 
  * Strong, fast, simple, non-cryptographic 32-bit hash function
  * 
@@ -34,14 +34,14 @@
  * 
  */
 public class HashFunct32 {
-
+	
 	private HashFunct32() {}
 	
 	public static int mzHash32(byte[] data, int start, int length, int seed) {	
-		int hash = 0x95DE1432 ^ seed;
+		int hash = seed;
 		
 		for(int i = 0; i < length; i++)
-			hash = 0xA8657C5B * (i + data[start + i]) ^ (hash << 2) ^ (hash >>> 2);
+			hash = 0xEC76399C * (0x76BD2B1E + i + data[start + i]) ^ (hash << 2) ^ (hash >>> 2);
 		
 		return hash;
 	}
@@ -59,19 +59,19 @@ public class HashFunct32 {
 	}
 
 	public static int mzHash32(byte b, int seed) {
-		int hash = 0x95DE1432 ^ seed;
-		return 0xA8657C5B * b ^ (hash << 2) ^ (hash >>> 2);
+		int hash = seed;
+		return 0xEC76399C * (0x76BD2B1E + b) ^ (hash << 2) ^ (hash >>> 2);
 	}
 	
 	public static int mzHash32(byte b) {
-		return 0xA8657C5B * b ^ 0x720FD5C4;
+		return 0xEC76399C * (0x76BD2B1E + b);
 	}
 	
 	public static int mzHash32(short s, int seed) {
-		int hash = 0x95DE1432 ^ seed;
+		int hash = seed;
 		
-		hash = 0xA8657C5B * (byte)s ^ (hash << 2) ^ (hash >>> 2);
-		hash = 0xA8657C5B * (1 + (byte)(s >> 8)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + (byte)s) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + 1 + (byte)(s >> 8)) ^ (hash << 2) ^ (hash >>> 2);
 		
 		return hash;
 	}
@@ -81,12 +81,12 @@ public class HashFunct32 {
 	}
 	
 	public static int mzHash32(int i, int seed) {
-		int hash = 0x95DE1432 ^ seed;
+		int hash = seed;
 		
-		hash = 0xA8657C5B * (byte)i ^ (hash << 2) ^ (hash >>> 2);
-		hash = 0xA8657C5B * (1 + (byte)(i >> 8)) ^ (hash << 2) ^ (hash >>> 2);
-		hash = 0xA8657C5B * (2 + (byte)(i >> 16)) ^ (hash << 2) ^ (hash >>> 2);
-		hash = 0xA8657C5B * (3 + (byte)(i >> 24)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + (byte)i) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + 1 + (byte)(i >> 8)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + 2 + (byte)(i >> 16)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + 3 + (byte)(i >> 24)) ^ (hash << 2) ^ (hash >>> 2);
 		
 		return hash;
 	}
@@ -96,16 +96,16 @@ public class HashFunct32 {
 	}
 	
 	public static int mzHash32(long l, int seed) {
-		int hash = 0x95DE1432 ^ seed;
+		int hash = seed;
 		
-		hash = 0xA8657C5B * (byte)l ^ (hash << 2) ^ (hash >>> 2);
-		hash = 0xA8657C5B * (1 + (byte)(l >> 8)) ^ (hash << 2) ^ (hash >>> 2);
-		hash = 0xA8657C5B * (2 + (byte)(l >> 16)) ^ (hash << 2) ^ (hash >>> 2);
-		hash = 0xA8657C5B * (3 + (byte)(l >> 24)) ^ (hash << 2) ^ (hash >>> 2);
-		hash = 0xA8657C5B * (4 + (byte)(l >> 32)) ^ (hash << 2) ^ (hash >>> 2);
-		hash = 0xA8657C5B * (5 + (byte)(l >> 40)) ^ (hash << 2) ^ (hash >>> 2);
-		hash = 0xA8657C5B * (6 + (byte)(l >> 48)) ^ (hash << 2) ^ (hash >>> 2);
-		hash = 0xA8657C5B * (7 + (byte)(l >> 56)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + (byte)l) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + 1 + (byte)(l >> 8)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + 2 + (byte)(l >> 16)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + 3 + (byte)(l >> 24)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + 4 + (byte)(l >> 32)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + 5 + (byte)(l >> 40)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + 6 + (byte)(l >> 48)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + 7 + (byte)(l >> 56)) ^ (hash << 2) ^ (hash >>> 2);
 		
 		return hash;
 	}
@@ -115,10 +115,10 @@ public class HashFunct32 {
 	}
 	
 	public static int mzHash32(char c, int seed) {
-		int hash = 0x95DE1432 ^ seed;
+		int hash = seed;
 		
-		hash = 0xA8657C5B * (byte)c ^ (hash << 2) ^ (hash >>> 2);
-		hash = 0xA8657C5B * (1 + (byte)(c >> 8)) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + (byte)c) ^ (hash << 2) ^ (hash >>> 2);
+		hash = 0xEC76399C * (0x76BD2B1E + 1 + (byte)(c >> 8)) ^ (hash << 2) ^ (hash >>> 2);
 		
 		return hash;
 	}
@@ -140,7 +140,7 @@ public class HashFunct32 {
 	}
 	
 	public static int mzHash32(boolean b) {
-		return b ? 0x140B7AE0 : 0x247957A5;
+		return b ? 0x0D6EB73D : 0xDD27AB83;
 	}
 	
 }
