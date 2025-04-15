@@ -24,7 +24,7 @@ It also has a good Avalanche Effect property: even a minimal differences (1 bit)
 **Maximum byte frequency** = 8727    
 **Variance** = 282898.28   
 **Standard Deviation** = 531.88  
-**Coefficient of Variation** = 51.97   
+**Coefficient of Variation** = 51.97%   
 **Chi-Square Test** = 70760.20   
 **Average bytes value** = 120.73 (127.5 random)   
 **Entropy** = 7.9119 bits (8 random)    
@@ -44,7 +44,7 @@ It also has a good Avalanche Effect property: even a minimal differences (1 bit)
 **Maximum byte frequency** = 1104    
 **Variance** = 1022.09    
 **Standard Deviation** = 31.97    
-**Coefficient of Variation** = 3.12    
+**Coefficient of Variation** = 3.12%    
 **Chi-Square Test** = 255.65   
 **Average bytes value** = 127.26 (127.5 random)   
 **Entropy** = 7.9993 bits (8 random)     
