@@ -36,12 +36,46 @@
 
 #include "mzhash32.h"
 
-uint32_t mzhash32(const char* data, size_t length, uint32_t seed)
+uint32_t mzhash32(const void* data, size_t length, uint32_t seed)
 {
-	uint32_t hash = 0x95DE1432 ^ seed;
-		
+	const int8_t *bytes = (const int8_t*)data;
+	uint32_t hash = seed;
+
 	for(size_t i = 0; i < length; i++)
-		hash = 0xA8657C5B * (i + data[i]) ^ (hash << 2) ^ (hash >> 2);
-		
+		hash = 0xEC76399C * (0x76BD2B1E + i + bytes[i]) ^ (hash << 2) ^ (hash >> 2);
+
+	return hash;
+}
+
+uint32_t mzhash32_noseed(const void* data, size_t length)
+{
+	const int8_t *bytes = (const int8_t*)data;
+	uint32_t hash = 0;
+
+	for(size_t i = 0; i < length; i++)
+		hash = 0xEC76399C * (0x76BD2B1E + i + bytes[i]) ^ (hash << 2) ^ (hash >> 2);
+
+	return hash;
+}
+
+uint32_t mzhash32_str(const char* str, uint32_t seed)
+{
+	uint32_t hash = seed;
+	size_t i = 0x76BD2B1E;
+
+	while(*str)
+		hash = 0xEC76399C * (i++ + *str++) ^ (hash << 2) ^ (hash >> 2);
+
+	return hash;
+}
+
+uint32_t mzhash32_str_noseed(const char* str)
+{
+	uint32_t hash = 0;
+	size_t i = 0x76BD2B1E;
+
+	while(*str)
+		hash = 0xEC76399C * (i++ + *str++) ^ (hash << 2) ^ (hash >> 2);
+
 	return hash;
 }

@@ -46,7 +46,13 @@ extern "C" {
 
 #define MZ_HASH_32_DEFAULT_SEED		0;
 
-uint32_t mzhash32(const char* data, size_t length, uint32_t seed);
+uint32_t mzhash32(const void* data, size_t length, uint32_t seed);
+
+uint32_t mzhash32_noseed(const void* data, size_t length);
+
+uint32_t mzhash32_str(const char* str, uint32_t seed);
+
+uint32_t mzhash32_str_noseed(const char* str);
 
 #ifdef __cplusplus
 }
