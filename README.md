@@ -29,7 +29,7 @@ It also has a good Avalanche Effect property: even a minimal differences (1 bit)
 **Collisions**: 0 (expected 0.4994)<br>
 **Monte Carlo Pi**: 3.142346 (**error** 0.02%)<br>
 
-## Minimum number of collisions
+## Collision numbers close to expected value
 mzHash32 produces a very low number of collisions for each reasonably large number of distinct values; it is close to the collisions number of a Universal Hash Function.  
 The number is given by the formula _n-m*(1-((m-1)/m)^n)_ where _n_ is the number of input values, _m_ is the number of all possible hash values (2^32 or 2^64).  
 
