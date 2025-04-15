@@ -15,19 +15,44 @@ It also has a good Avalanche Effect property: even a minimal differences (1 bit)
 
 #### java.lang.String.hashCode(): suboptimal dispersion 
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/java_hash.png)<br>
-**Hash funtion**: java.lang.String.hashCode()<br>
-**Source file**: words_en.txt<br>
-**Distinct words**: 65503<br>
-**Collisions**: 118 (expected 0.4994)<br>
-**Monte Carlo Pi**: 3.251076 (**error** 3.48%)
-  
+**Hash funtion**: java.lang.String.hashCode()     
+**Source file**: words_en.txt    
+**Distinct words**: 65503    
+**Data length** = 262012 bytes   
+**Average byte frequency** = 1023.48    
+**Minimum byte frequency** = 797    
+**Maximum byte frequency** = 8727    
+**Variance** = 282898.28   
+**Standard Deviation** = 531.88  
+**Coefficient of Variation** = 51.97   
+**Chi-Square Test** = 70760.20   
+**Average bytes value** = 120.73 (127.5 random)   
+**Entropy** = 7.9119 bits (8 random)    
+**Monte Carlo for Pi 2D** = 3.210497 (error = 2.193%)   
+**Monte Carlo for Pi 3D** = 3.360676 (error = 6.974%)    
+**Average of Contiguous Byte Pairs** = 31027.8356 (32767.5 random) (error 5.309%)    
+**4 Bytes Collisions** = 118 (expected collisions = 0.4994)    
+
 #### mzHash32(): optimal dispersion
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzh32_distributions.png)<br>
-**Hash funtion**: mzHash32()<br>
-**Source file**: words_en.txt<br>
-**Distinct words**: 65503<br>
-**Collisions**: 0 (expected 0.4994)<br>
-**Monte Carlo Pi**: 3.142346 (**error** 0.02%)<br>
+**Hash funtion**: mzHash32()     
+**Source file**: words_en.txt       
+**Distinct words**: 65503       
+**Data length** = 262012 bytes    
+**Average byte frequency** = 1023.48    
+**Minimum byte frequency** = 931   
+**Maximum byte frequency** = 1104    
+**Variance** = 1022.09    
+**Standard Deviation** = 31.97    
+**Coefficient of Variation** = 3.12    
+**Chi-Square Test** = 255.65   
+**Average bytes value** = 127.26 (127.5 random)   
+**Entropy** = 7.9993 bits (8 random)     
+**Monte Carlo for Pi 2D** = 3.147202 (error = 0.1785%)    
+**Monte Carlo for Pi 3D** = 3.155606 (error = 0.4460%)    
+**Average of Contiguous Byte Pairs** = 32705.0919 (32767.5 random) (error 0.190%)     
+**4 Bytes Collisions** = 0 (expected collisions = 0.4994)     
+
 
 ## Collision numbers close to expected value
 mzHash32 produces a very low number of collisions for each reasonably large number of distinct values; it is close to the collisions number of a Universal Hash Function.  
