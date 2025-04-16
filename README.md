@@ -90,7 +90,7 @@ Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 05F5E0FF|1,000,000,000| 107,88
 
 Note that the number of collisions of mzHash32 is always very close to the expected value; the same goes for murmur3, while XX sometimes deviates significantly from the expected value (outliers in bold).
 
-## Evaluating Seed Sensitivity
+## Evaluating seed sensitivity
 A good non-cryptographic hash function should be robust with respect to the seed: its behavior (especially the number of collisions) shouldn't change significantly with variations in the seed.   
 This ensures stable performance, predictability, and a uniform distribution of hash values.   
 MzHash32 maintains statistical characteristics regardless of the choice of seed; the number of collisions can vary, but always within a range that ensures a uniform distribution of the output. Furthermore, the choice of seed does not affect performance.  
