@@ -94,6 +94,9 @@ Note that the number of collisions of mzHash32 is always very close to the expec
 A good non-cryptographic hash function should be robust with respect to the seed: its behavior (especially the number of collisions) shouldn't change significantly with variations in the seed.   
 This ensures stable performance, predictability, and a uniform distribution of hash values.   
 MzHash32 maintains statistical characteristics regardless of the choice of seed; the number of collisions can vary, but always within a range that ensures a uniform distribution of the output. Furthermore, the choice of seed does not affect performance.  
+If there are no specific needs, it is recommended to use mzHash32 with the default seed (0) as it is optimized to produce the closest possible number of collisions to the theoretically expected number, but in case of need the quality of mzHash32 remains extremely high with the choice of a different seed.  
+
+### Analisys of the impact of seed choice
 
 ## Speed
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzhash32speed.jpg)
