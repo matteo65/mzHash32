@@ -96,7 +96,7 @@ This ensures stable performance, predictability, and a uniform distribution of h
 MzHash32 maintains statistical characteristics regardless of the choice of seed; the number of collisions can vary, but always within a range that ensures a uniform distribution of the output. Furthermore, the choice of seed does not affect performance.  
 If there are no specific needs, it is recommended to use mzHash32 with the default seed (0) as it is optimized to produce the closest possible number of collisions to the theoretically expected number, but in case of need the quality of mzHash32 remains extremely high with the choice of a different seed.  
 
-#### Analisys of the impact of seed choice
+#### Analisys of the impact of seed choice (10,000 random seed)
 
 Data input                                         |   #Vaues    |#Expected Collisions|#Collision with seed=0|Avg colls with ramdom seed|Standard Deviation|Coefficient of Variation
 :---                                               |         ---:|                ---:|                   ---:|                     ---:|              ---:|                    ---:
