@@ -93,7 +93,7 @@ Note that the number of collisions of mzHash32 is always very close to the expec
 ## Evaluating Seed Sensitivity
 A good non-cryptographic hash function should be robust with respect to the seed: its behavior (especially the number of collisions) shouldn't change significantly with variations in the seed.   
 This ensures stable performance, predictability, and a uniform distribution of hash values.   
-MzHash maintains statistical characteristics regardless of the choice of seed; the number of collisions can vary, but always within a range that ensures a uniform distribution of the output. Furthermore, the choice of seed does not affect performance.  
+MzHash32 maintains statistical characteristics regardless of the choice of seed; the number of collisions can vary, but always within a range that ensures a uniform distribution of the output. Furthermore, the choice of seed does not affect performance.  
 
 ## Speed
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzhash32speed.jpg)
