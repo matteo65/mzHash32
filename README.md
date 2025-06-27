@@ -33,7 +33,7 @@ It also has a good Avalanche Effect property: even a minimal differences (1 bit)
 **Monte Carlo for Pi 2D** = 3.210497 (error = 2.193%)   
 **Monte Carlo for Pi 3D** = 3.360676 (error = 6.974%)    
 **Average of Contiguous Byte Pairs** = 31027.8356 (32767.5 random) (error 5.309%)    
-**4 Bytes Collisions** = 118 (expected collisions = 0.4994)    
+**4 Bytes Collisions** = 118 (expected collisions = 0.4995)    
 
 #### mzHash32(): optimal dispersion
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzh32_distributions.png)<br>
@@ -42,18 +42,18 @@ It also has a good Avalanche Effect property: even a minimal differences (1 bit)
 **Distinct words**: 65503       
 **Data length** = 262012 bytes    
 **Average byte frequency** = 1023.48    
-**Minimum byte frequency** = 931   
+**Minimum byte frequency** = 939   
 **Maximum byte frequency** = 1104    
-**Variance** = 1022.09    
-**Standard Deviation** = 31.97    
-**Coefficient of Variation** = 3.12%    
-**Chi-Square Test** = 255.65   
-**Average bytes value** = 127.26 (127.5 random)   
+**Variance** = 956.08    
+**Standard Deviation** = 30.92    
+**Coefficient of Variation** = 3.02%    
+**Chi-Square Test** = 239.14   
+**Average bytes value** = 127.65 (127.5 random)   
 **Entropy** = 7.9993 bits (8 random)     
-**Monte Carlo for Pi 2D** = 3.147202 (error = 0.1785%)    
-**Monte Carlo for Pi 3D** = 3.155606 (error = 0.4460%)    
-**Average of Contiguous Byte Pairs** = 32705.0919 (32767.5 random) (error 0.190%)     
-**4 Bytes Collisions** = 0 (expected collisions = 0.4994)     
+**Monte Carlo for Pi 2D** = 3.136942 (error = 0.148%)    
+**Monte Carlo for Pi 3D** = 3.125927 (error = 0.499%)    
+**Average of Contiguous Byte Pairs** = 32807.079 (32767.5 random) (error 0.121%)     
+**4 Bytes Collisions** = 0 (expected collisions = 0.4995)     
 
 
 ## Collision numbers close to expected value
