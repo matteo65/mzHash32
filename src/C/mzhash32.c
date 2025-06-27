@@ -1,36 +1,15 @@
 /**
- * mzHash32
- *
+ * mzhash32
+ * 
  * Strong, fast, simple, non-cryptographic 32-bit hash function
  * 
  * Author: Matteo Zapparoli
- * Date: 2022
- * Licence: Public Domain
- * 
- * This is free and unencumbered software released into the public domain.
+ * Date: 2025-06
+ * Reelease: 3
  *
- * Anyone is free to copy, modify, publish, use, compile, sell, or
- * distribute this software, either in source code form or as a compiled
- * binary, for any purpose, commercial or non-commercial, and by any
- * means.
- * 
- * In jurisdictions that recognize copyright laws, the author or authors
- * of this software dedicate any and all copyright interest in the
- * software to the public domain. We make this dedication for the benefit
- * of the public at large and to the detriment of our heirs and
- * successors. We intend this dedication to be an overt act of
- * relinquishment in perpetuity of all present and future rights to this
- * software under copyright law.
- * 
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
- * OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- * 
- * For more information, please refer to <https://unlicense.org>
+ * SPDX-FileCopyrightText: 2025 Matteo Zapparoli <zapparoli.matteo@gmail.com>
+ * SPDX-License-Identifier: Apache-2.0
+ * See LICENSE file in project root.
  * 
  */
 
@@ -39,10 +18,10 @@
 uint32_t mzhash32(const void* data, size_t length, uint32_t seed)
 {
 	const int8_t *bytes = (const int8_t*)data;
-	uint32_t hash = seed;
+	uint32_t hash = 0x8979BEFC ^ seed;
 
 	for(size_t i = 0; i < length; i++)
-		hash = 0xEC76399C * (0x76BD2B1E + i + bytes[i]) ^ (hash << 2) ^ (hash >> 2);
+		hash = 0x99AF844D * ((i + bytes[i]) ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
 }
@@ -50,32 +29,32 @@ uint32_t mzhash32(const void* data, size_t length, uint32_t seed)
 uint32_t mzhash32_noseed(const void* data, size_t length)
 {
 	const int8_t *bytes = (const int8_t*)data;
-	uint32_t hash = 0;
+	uint32_t hash = 0x8979BEFC;
 
 	for(size_t i = 0; i < length; i++)
-		hash = 0xEC76399C * (0x76BD2B1E + i + bytes[i]) ^ (hash << 2) ^ (hash >> 2);
+		hash = 0x99AF844D * ((i + bytes[i]) ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
 }
 
 uint32_t mzhash32_str(const char* str, uint32_t seed)
 {
-	uint32_t hash = seed;
-	size_t i = 0x76BD2B1E;
+	uint32_t hash = 0x8979BEFC ^ seed;
+	size_t i = 0;
 
 	while(*str)
-		hash = 0xEC76399C * (i++ + *str++) ^ (hash << 2) ^ (hash >> 2);
+		hash = 0x99AF844D * ((i++ + *str++) ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
 }
 
 uint32_t mzhash32_str_noseed(const char* str)
 {
-	uint32_t hash = 0;
-	size_t i = 0x76BD2B1E;
+	uint32_t hash = 0x8979BEFC;
+	size_t i = 0;
 
 	while(*str)
-		hash = 0xEC76399C * (i++ + *str++) ^ (hash << 2) ^ (hash >> 2);
+		hash = 0x99AF844D * ((i++ + *str++) ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
 }
