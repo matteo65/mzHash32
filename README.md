@@ -99,10 +99,10 @@ If there are no specific needs, it is recommended to use mzHash32 with the defau
 
 #### Analisys of the impact of seed choice (10,000 tests with random seed)
 
-Data input                                         |   #Vaues    |#Expected Collisions|#Collision with seed=0|Avg colls with ramdom seed|Standard Deviation|Coefficient of Variation
-:---                                               |         ---:|                ---:|                   ---:|                     ---:|              ---:|                    ---:
-Numbers in english from "zero" to "nine hundred ninety-nine thousand nine hundred ninety-nine"|1,000,000|116|118|112|1.245|1.11%
-Numbers in string from "0" to "999999"|1,000,000|116|112|116|1.235|1.06%
+**Data input**: Numbers in english from "zero" to "nine hundred ninety-nine thousand nine hundred ninety-nine"
+**Hashs**: 10,000
+**Distribution of hash values**
+![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzhash32_seed_map.png).
 
 ## Speed
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzhash32speed.jpg)
