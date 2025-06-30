@@ -79,7 +79,7 @@ Number as strings from<br>"1234567890123456789" to "1234567890223456788" | 100,0
 Strings from<br>"abcdefg1234567890<br>123456789hijklmn" to "abcdefg1234567890<br>223456788hijklmn" | 100,000,000 | 1,155,171| 1,151,959 | 1,152,600| **1,037,151** 
 Numbers as strings from "0" to "999999"            |1,000,000| 116.4        |117|120|**17**
 Numbers as strings from "aaaa0aaaa" to "aaaa999999aaaa"|1,000,000| 116.4 |**145**|112|**22**
-Hex numbers as string from "0" to "7FFFFFFE"| 2,147,483,647| 457,545,699| 456,687,411|457,465,265|460,825,702
+Hex numbers as string from "0" to "98967F"| 10,000,000| 11,633| 10,813|11,433|**2,537**
 
 #### Number of collisions for binary inputs
 Data input                                         |   #Vaues    |#Expected Collisions|  mzHash32 | Murmur3 |   XX
