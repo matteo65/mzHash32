@@ -84,10 +84,10 @@ Hex numbers as string from "0" to "98967F"| 10,000,000| 11,633| 10,813|11,433|**
 #### Number of collisions for binary inputs
 Data input                                         |   #Vaues    |#Expected Collisions|  mzHash32 | Murmur3 |   XX
 :---                                               |         ---:|                ---:|       ---:|     ---:|  ---:
-Binary 32 bytes random                             |    100,000  |             1.164  |     2     |   0     |    2 
-Binary 40 bytes [b,b,b,b,b,b,b,b,b,b] b from FF676980 to FFFFFFFF| 10,000,000|11,633|11,676| 11,695| 11,846
-Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 05F5E0FF|100,000,000| 1,155,171| 1,157,305 | 1,154,653| **1,411,483**
-Binary 24 bytes [b,b\*3,b\*5,b\*7,b\*11,b\*13], b from 00000000 to 05F5E0FF|100,000,000| 1,155,171| 1,154,367 | 1,154,542| 1,160,003
+Binary 32 bytes random                             |  1,000,000  |             116.4  |     104   |   121   |   127 
+Binary 40 bytes [b,b,b,b,b,b,b,b,b,b] b from FF676980 to FFFFFFFF| 10,000,000|11,633|11,677| 11,695| 11,846
+Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 0098967F|10,000,000| 11,633| 11,471 | 11,509| **1,542**
+Binary 24 bytes [b,b\*3,b\*5,b\*7,b\*11,b\*13], b from 00000000 to 0098967F|10,000,000| 11,633| 11,667 | 11,664| 10,831
 Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 05F5E0FF|1,000,000,000| 107,882,641| 107,904,990 | 107,880,319| **113,834,210**
 
 Note that the number of collisions of mzHash32 is always very close to the expected value; the same goes for murmur3, while XX sometimes deviates significantly from the expected value (outliers in bold).
