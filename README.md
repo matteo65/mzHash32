@@ -99,9 +99,9 @@ If there are no specific needs, it is recommended to use mzHash32 with the defau
 
 #### Analisys of the impact of seed choice (10,000 tests with random seed)
 
-**Data input**: Numbers in english from "zero" to "nine hundred ninety-nine thousand nine hundred ninety-nine"
-**Hashs**: 10,000
-**Distribution of hash values**
+**Data input**: Numbers in english from "zero" to "nine hundred ninety-nine thousand nine hundred ninety-nine"  
+**Values**: 10,000  
+**Distribution of hash values**  
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzhash32_seed_map.png).
 
 ## Speed
