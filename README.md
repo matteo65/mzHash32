@@ -75,8 +75,8 @@ File random_64_signed_nums.txt                     |   1,000,000 |       116.4  
 Numbers in english from **"zero"** to **"nine million nine hundred ninety-nine thousand nine hundred ninety-nine"**|10,000,000| 11,633 | 11,736 | 11,672 | 11,474
 File [rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt) dictionary of common passwords|14,344,391|23,927|23,951|24,206|23,895
 Numbers in english from **"five hundred thirty-nine billion four hundred ten million seven hundred one thousand four hundred eighty-three"** to **"five hundred thirty-nine billion four hundred twenty million seven hundred one thousand four hundred eighty-two"** | 10,000,000 | 11,633 | 11,568 | 11,612 | 11,539
-Number as strings from<br>"1234567890123456789" to "1234567890223456788" | 100,000,000 | 1,155,171 | 1,195,229 | 1,155,789|   **808,693**
-Strings from<br>"abcdefg1234567890<br>123456789hijklmn" to "abcdefg1234567890<br>223456788hijklmn" | 100,000,000 | 1,155,171| 1,138,092 | 1,152,600| **1,037,151** 
+Number as strings from<br>"1234567890123456789" to "1234567890223456788" | 100,000,000 | 1,155,171 | 1,150,718 | 1,155,789|   **808,693**
+Strings from<br>"abcdefg1234567890<br>123456789hijklmn" to "abcdefg1234567890<br>223456788hijklmn" | 100,000,000 | 1,155,171| 1,151,959 | 1,152,600| **1,037,151** 
 Numbers as strings from "0" to "999999999"         |1,000,000,000| 107,882,641        |108,150,889|107,822,463|110,287,893
 Numbers as strings from "aaaa0aaaa" to "aaaa1999999999aaaa"|2,000,000,000| 401,068,994 |399,922,661|401,043,716|391,119,332
 Hex numbers as string from "0" to "7FFFFFFE"| 2,147,483,647| 457,545,699| 456,687,411|457,465,265|460,825,702
