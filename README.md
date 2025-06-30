@@ -88,7 +88,6 @@ Binary 32 bytes random                             |  1,000,000  |             1
 Binary 40 bytes [b,b,b,b,b,b,b,b,b,b] b from FF676980 to FFFFFFFF| 10,000,000|11,633|11,677| 11,695| 11,846
 Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 0098967F|10,000,000| 11,633| 11,471 | 11,509| **1,542**
 Binary 24 bytes [b,b\*3,b\*5,b\*7,b\*11,b\*13], b from 00000000 to 0098967F|10,000,000| 11,633| 11,667 | 11,664| 10,831
-Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 05F5E0FF|1,000,000,000| 107,882,641| 107,904,990 | 107,880,319| **113,834,210**
 
 Note that the number of collisions of mzHash32 is always very close to the expected value; the same goes for murmur3, while XX sometimes deviates significantly from the expected value (outliers in bold).
 
