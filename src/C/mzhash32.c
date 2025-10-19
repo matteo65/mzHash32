@@ -18,10 +18,11 @@
 uint32_t mzhash32(const void* data, size_t length, uint32_t seed)
 {
 	const int8_t *bytes = (const int8_t*)data;
-	uint32_t hash = 0x8979BEFC ^ seed;
+	const int8_t *end = bytes + length;
+	uint32_t hash = 0x06EAFDF7 ^ seed;
 
-	for(size_t i = 0; i < length; i++)
-		hash = 0x99AF844D * ((i + bytes[i]) ^ (hash << 2) ^ (hash >> 2));
+	while(bytes != end)
+		hash = 0x7554DEEB * (*bytes++ ^ hash ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
 }
@@ -29,32 +30,32 @@ uint32_t mzhash32(const void* data, size_t length, uint32_t seed)
 uint32_t mzhash32_noseed(const void* data, size_t length)
 {
 	const int8_t *bytes = (const int8_t*)data;
-	uint32_t hash = 0x8979BEFC;
+	const int8_t *end = bytes + length;
+	uint32_t hash = 0x06EAFDF7;
 
-	for(size_t i = 0; i < length; i++)
-		hash = 0x99AF844D * ((i + bytes[i]) ^ (hash << 2) ^ (hash >> 2));
+	while(bytes != end)
+		hash = 0x7554DEEB * (*bytes++ ^ hash ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
 }
 
 uint32_t mzhash32_str(const char* str, uint32_t seed)
 {
-	uint32_t hash = 0x8979BEFC ^ seed;
-	size_t i = 0;
+	uint32_t hash = 0x06EAFDF7 ^ seed;
 
 	while(*str)
-		hash = 0x99AF844D * ((i++ + *str++) ^ (hash << 2) ^ (hash >> 2));
+		hash = 0x7554DEEB * (hash ^ *str++ ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
 }
 
 uint32_t mzhash32_str_noseed(const char* str)
 {
-	uint32_t hash = 0x8979BEFC;
-	size_t i = 0;
+	uint32_t hash = 0x06EAFDF7;
 
 	while(*str)
-		hash = 0x99AF844D * ((i++ + *str++) ^ (hash << 2) ^ (hash >> 2));
+		hash = 0x7554DEEB * (hash ^ *str++ ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
 }
+
