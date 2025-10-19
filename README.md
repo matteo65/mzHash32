@@ -2,12 +2,12 @@
 Strong, fast, simple, non-cryptography hash function
 
 ```java
-public static int mzHash32(byte[] data, int start, int length, int seed) {	
-	int hash = 0x8979BEFC ^ seed;
+public static final int mzHash32(byte[] data, int start, int length, int seed) {
+	int hash = 0x06EAFDF7 ^ seed;
 
 	for(int i = 0; i < length; i++)
-		hash = 0x99AF844D * ((i + data[start + i]) ^ (hash << 2) ^ (hash >>> 2));
-
+		hash = 0x7554DEEB * (data[start + i] ^ hash ^ (hash << 2) ^ (hash >>> 2));
+				
 	return hash;
 }
 ```
@@ -65,13 +65,13 @@ The number is given by the formula _n-m*(1-((m-1)/m)^n)_ where _n_ is the number
 Data input                                         |   #Vaues    |#Expected Collisions|  mzHash32 | Murmur3 |     XX
 :---                                               |         ---:|                ---:|       ---:|     ---:|    ---:
 File words_en.txt                                  |      65,503 |         0.5        |          0|        0|       0
-File words_es.txt                                  |      74,571 |         0.6        |          1|        2|       0
+File words_es.txt                                  |      74,571 |         0.6        |          0|        2|       0
 File words_latin.txt                               |      80,007 |         0.7        |          1|        1|       1
 File words_it.txt                                  |     117,558 |         1.6        |          2|        0|       2
-File words_en_es_it_latin.txt                      |     315,198 |        11.6        |         11|        9|       9
+File words_en_es_it_latin.txt                      |     315,198 |        11.6        |         12|        9|       9
 File words_and_numbers.txt                         |     429,187 |        21.4        |         19|       20|      19
-File first_million_primes.txt                      |   1,000,000 |       116.4        |        118|      118|  **85**
-File random_64_signed_nums.txt                     |   1,000,000 |       116.4        |        115|      110|  **143**
+File first_million_primes.txt                      |   1,000,000 |       116.4        |        112|      118|  **85**
+File random_64_signed_nums.txt                     |   1,000,000 |       116.4        |        121|      110|  **143**
 Numbers in english from **"zero"** to **"nine million nine hundred ninety-nine thousand nine hundred ninety-nine"**|10,000,000| 11,633 | 11,877| 11,672 | 11,474
 File [rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt) dictionary of common passwords|14,344,391|23,927|23,981|24,206|23,895
 Numbers in english from **"five hundred thirty-nine billion four hundred ten million seven hundred one thousand four hundred eighty-three"** to **"five hundred thirty-nine billion four hundred twenty million seven hundred one thousand four hundred eighty-two"** | 10,000,000 | 11,633 | 11,582 | 11,612 | 11,539
