@@ -72,14 +72,14 @@ File words_en_es_it_latin.txt                      |     315,198 |        11.6  
 File words_and_numbers.txt                         |     429,187 |        21.4        |         19|       20|      19
 File first_million_primes.txt                      |   1,000,000 |       116.4        |        118|      118|  **85**
 File random_64_signed_nums.txt                     |   1,000,000 |       116.4        |        115|      110|  **143**
-Numbers in english from **"zero"** to **"nine million nine hundred ninety-nine thousand nine hundred ninety-nine"**|10,000,000| 11,633 | 11,736 | 11,672 | 11,474
-File [rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt) dictionary of common passwords|14,344,391|23,927|23,951|24,206|23,895
-Numbers in english from **"five hundred thirty-nine billion four hundred ten million seven hundred one thousand four hundred eighty-three"** to **"five hundred thirty-nine billion four hundred twenty million seven hundred one thousand four hundred eighty-two"** | 10,000,000 | 11,633 | 11,568 | 11,612 | 11,539
-Number as strings from<br>"1234567890123456789" to "1234567890223456788" | 100,000,000 | 1,155,171 | 1,150,718 | 1,155,789|   **808,693**
-Strings from<br>"abcdefg1234567890<br>123456789hijklmn" to "abcdefg1234567890<br>223456788hijklmn" | 100,000,000 | 1,155,171| 1,151,959 | 1,152,600| **1,037,151** 
-Numbers as strings from "0" to "999999"            |1,000,000| 116.4        |117|120|**17**
-Numbers as strings from "aaaa0aaaa" to "aaaa999999aaaa"|1,000,000| 116.4 |**145**|112|**22**
-Hex numbers as string from "0" to "98967F"| 10,000,000| 11,633| 10,813|11,433|**2,537**
+Numbers in english from **"zero"** to **"nine million nine hundred ninety-nine thousand nine hundred ninety-nine"**|10,000,000| 11,633 | 11,877| 11,672 | 11,474
+File [rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt) dictionary of common passwords|14,344,391|23,927|23,981|24,206|23,895
+Numbers in english from **"five hundred thirty-nine billion four hundred ten million seven hundred one thousand four hundred eighty-three"** to **"five hundred thirty-nine billion four hundred twenty million seven hundred one thousand four hundred eighty-two"** | 10,000,000 | 11,633 | 11,582 | 11,612 | 11,539
+Number as strings from<br>"1234567890123456789" to "1234567890223456788" | 100,000,000 | 1,155,171 | 1,150,690 | 1,155,789|   **808,693**
+Strings from<br>"abcdefg1234567890<br>123456789hijklmn" to "abcdefg1234567890<br>223456788hijklmn" | 100,000,000 | 1,155,171| 1,148,193 | 1,152,600| **1,037,151** 
+Numbers as strings from "0" to "999999"                |1,000,000| 116.4 |122|120|**17**
+Numbers as strings from "aaaa0aaaa" to "aaaa999999aaaa"|1,000,000| 116.4 |128|112|**22**
+Hex numbers as string from "0" to "98967F"| 10,000,000| 11,633| 11,482|11,433|**2,537**
 
 #### Number of collisions for binary inputs
 Data input                                         |   #Vaues    |#Expected Collisions|  mzHash32 | Murmur3 |   XX
