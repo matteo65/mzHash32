@@ -44,7 +44,7 @@ uint32_t mzhash32_str(const char* str, uint32_t seed)
 	uint32_t hash = 0x06EAFDF7 ^ seed;
 
 	while(*str)
-		hash = 0x7554DEEB * (hash ^ *str++ ^ (hash << 2) ^ (hash >> 2));
+		hash = 0x7554DEEB * (*str++ ^ hash ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
 }
@@ -54,8 +54,7 @@ uint32_t mzhash32_str_noseed(const char* str)
 	uint32_t hash = 0x06EAFDF7;
 
 	while(*str)
-		hash = 0x7554DEEB * (hash ^ *str++ ^ (hash << 2) ^ (hash >> 2));
+		hash = 0x7554DEEB * (*str++ ^ hash ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
 }
-
