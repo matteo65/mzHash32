@@ -1,13 +1,16 @@
 # mzHash32
 Strong, fast, simple, non-cryptography hash function
 
-```java
-public static final int mzHash32(byte[] data, int start, int length, int seed) {
-	int hash = 0x06EAFDF7 ^ seed;
+```C
+uint32_t mzhash32(const void* data, size_t length, uint32_t seed)
+{
+	const int8_t *bytes = (const int8_t*)data;
+	const int8_t *end = bytes + length;
+	uint32_t hash = 0x032559B1 ^ seed;
 
-	for(int i = 0; i < length; i++)
-		hash = 0x7554DEEB * (data[start + i] ^ hash ^ (hash << 2) ^ (hash >>> 2));
-				
+	while(bytes != end)
+		hash = 0xCF4EDCBF * (*bytes++ ^ hash * 4 ^ hash / 4);
+
 	return hash;
 }
 ```
