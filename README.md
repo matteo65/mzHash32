@@ -45,17 +45,17 @@ It also has a good Avalanche Effect property: even a minimal differences (1 bit)
 **Distinct words**: 65503       
 **Data length** = 262012 bytes    
 **Average byte frequency μ** = 1023.48    
-**Minimum byte frequency** = 931   
-**Maximum byte frequency** = 1104    
-**Variance σ<sup>2</sup>** = 1022.09    
-**Standard Deviation σ** = 31.97    
-**Coefficient of Variation <sup>σ</sup>/<sub>μ</sub>** = 3.12%    
-**Chi-Square Test 𝛘<sup>2</sup>** = 255.65   
-**Average bytes value** = 127.26 (127.5 random)   
-**Entropy** = 7.9993 bits (8 random)     
-**Monte Carlo for π 2D** = 3.147201 (error = 0.17%)    
-**Monte Carlo for π 3D** = 3.155605 (error = 0.44%)    
-**Average of Contiguous Byte Pairs** = 32705.091 (32767.5 random) (error 0.19%)     
+**Minimum byte frequency** = 913   
+**Maximum byte frequency** = 1109    
+**Variance σ<sup>2</sup>** = 1152.33    
+**Standard Deviation σ** = 33.95    
+**Coefficient of Variation <sup>σ</sup>/<sub>μ</sub>** = 3.32%    
+**Chi-Square Test 𝛘<sup>2</sup>** = 288.23   
+**Average bytes value** = 127.21 (127.5 random)   
+**Entropy** = 7.9992 bits (8 random)     
+**Monte Carlo for π 2D** = 3.14876 (error = 0.23%)    
+**Monte Carlo for π 3D** = 3.1420 (error = 0.01%)    
+**Average of Contiguous Byte Pairs** = 32692.38 (32767.5 random) (error 0.23%)     
 **4 Bytes Collisions** = 0 (expected collisions = 0.4995)     
 
 
