@@ -112,8 +112,7 @@ MzHash32 processes byte by byte, while Murmur and XX group 4 bytes at a time for
 ![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzhash32speed.png)
 
 ## Vulnerability
-MzHash32, like most non-cryptographic functions, is non-secure because it is not specifically designed to be difficult to reverse by an adversary, making it unsuitable for cryptographic purposes. Its use is instead recommended in all other contexts where hash functions are used.  
-Like other non-cryptographic functions, its security depends on the secrecy of the possibly used seed.  
+MzHash32, like most non-cryptographic functions, is non-secure because it is not specifically designed to be difficult to reverse by an adversary, making it unsuitable for cryptographic purposes. Its use is instead recommended in all other contexts where hash functions are used.   
 
 ## Portability
 It is minimalist, elegant, straightforward and can be easily written in virtually any programming language. 
