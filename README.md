@@ -109,7 +109,7 @@ If there are no specific needs, it is recommended to use mzHash32 with the defau
 
 ## Speed
 MzHash32 processes byte by byte, while Murmur and XX group 4 bytes at a time for each processing. Therefore, the speed of MzHash32 is lower, however, if the execution speed of MzHash32 is compared with other functions that process one byte at a time, it is very high-performance since the number of operations performed in each cycle is really low. The comparison obviously must be made with functions that guarantee an optimal number of collisions, close to a Universal Hash Function  
-![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzhash32speed.jpg)
+![Alt Text](https://raw.githubusercontent.com/matteo65/mzHash32/main/Resource/mzhash32speed.png)
 
 ## Vulnerability
 MzHash32, like most non-cryptographic functions, is non-secure because it is not specifically designed to be difficult to reverse by an adversary, making it unsuitable for cryptographic purposes. Its use is instead recommended in all other contexts where hash functions are used.  
