@@ -18,10 +18,9 @@
 uint32_t mzhash32(const void* data, size_t length, uint32_t seed)
 {
 	const int8_t *bytes = (const int8_t*)data;
-	const int8_t *end = bytes + length;
 	uint32_t hash = 0x032559B1 ^ seed;
 
-	while(bytes != end)
+	while(length--)
 		hash = 0xCF4EDCBF * (*bytes++ ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
@@ -30,10 +29,9 @@ uint32_t mzhash32(const void* data, size_t length, uint32_t seed)
 uint32_t mzhash32_noseed(const void* data, size_t length)
 {
 	const int8_t *bytes = (const int8_t*)data;
-	const int8_t *end = bytes + length;
 	uint32_t hash = 0x032559B1;
 
-	while(bytes != end)
+	while(length--)
 		hash = 0xCF4EDCBF * (*bytes++ ^ (hash << 2) ^ (hash >> 2));
 
 	return hash;
@@ -58,3 +56,4 @@ uint32_t mzhash32_str_noseed(const char* str)
 
 	return hash;
 }
+
