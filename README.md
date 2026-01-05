@@ -5,10 +5,10 @@ Strong, fast, simple, non-cryptography hash function
 uint32_t mzhash32(const void* data, size_t length, uint32_t seed)
 {
 	const int8_t *bytes = (const int8_t*)data;
-	uint32_t hash = 0x032559B1 ^ seed;
+	uint32_t hash = 0x514430D1 | seed;
 
 	while(length--)
-		hash = 0xCF4EDCBF * (*bytes++ ^ hash * 4 ^ hash / 4);
+		hash = 0x003C50DB * (*bytes++ ^ hash * 2 ^ hash / 2);
 
 	return hash;
 }
