@@ -17,7 +17,7 @@ public final class HashFunct32 {
 	private HashFunct32() {}
 
 	public static final int mzHash32(byte[] data, int start, int length, int seed) {
-		int hash = 0x514430D1 | seed;
+		int hash = 0x514430D1 ^ seed;
 
 		for(int i = 0; i < length; i++)
 			hash = 0x003C50DB * (data[start + i] ^ (hash << 1) ^ (hash >>> 1));
@@ -38,7 +38,7 @@ public final class HashFunct32 {
 	}
 
 	public static final int mzHash32(byte b, int seed) {
-		int hash = 0x514430D1 | seed;
+		int hash = 0x514430D1 ^ seed;
 		
 		return 0x003C50DB * (b ^ (hash << 1) ^ (hash >>> 1));
 	}
@@ -48,7 +48,7 @@ public final class HashFunct32 {
 	}
 
 	public static final int mzHash32(short s, int seed) {
-		int hash = 0x514430D1 | seed;
+		int hash = 0x514430D1 ^ seed;
 		
 		hash = 0x003C50DB * ((byte)s        ^ (hash << 1) ^ (hash >>> 1));
 		hash = 0x003C50DB * ((byte)(s >> 8) ^ (hash << 1) ^ (hash >>> 1));
@@ -65,7 +65,7 @@ public final class HashFunct32 {
 	}
 
 	public static final int mzHash32(int i, int seed) {
-		int hash = 0x514430D1 | seed;
+		int hash = 0x514430D1 ^ seed;
 		
 		hash = 0x003C50DB * ((byte)i         ^ (hash << 1) ^ (hash >>> 1));
 		hash = 0x003C50DB * ((byte)(i >> 8)  ^ (hash << 1) ^ (hash >>> 1));
@@ -86,7 +86,7 @@ public final class HashFunct32 {
 	}
 
 	public static final int mzHash32(long l, int seed) {
-		int hash = 0x514430D1 | seed;
+		int hash = 0x514430D1 ^ seed;
 		
 		hash = 0x003C50DB * ((byte)l         ^ (hash << 1) ^ (hash >>> 1));
 		hash = 0x003C50DB * ((byte)(l >> 8)  ^ (hash << 1) ^ (hash >>> 1));
@@ -115,7 +115,7 @@ public final class HashFunct32 {
 	}
 
 	public static final int mzHash32(char c, int seed) {
-		int hash = 0x514430D1 | seed;
+		int hash = 0x514430D1 ^ seed;
 		
 		hash = 0x003C50DB * ((byte)c        ^ (hash << 1) ^ (hash >>> 1));
 		hash = 0x003C50DB * ((byte)(c >> 8) ^ (hash << 1) ^ (hash >>> 1));
@@ -148,7 +148,3 @@ public final class HashFunct32 {
 	}
 
 }
-
-
-
-
