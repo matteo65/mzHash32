@@ -5,7 +5,7 @@ Strong, fast, simple, non-cryptography hash function
 uint32_t mzhash32(const void* data, size_t length, uint32_t seed)
 {
 	const int8_t *bytes = (const int8_t*)data;
-	uint32_t hash = 0x514430D1 | seed;
+	uint32_t hash = 0x514430D1 ^ seed;
 
 	while(length--)
 		hash = 0x003C50DB * (*bytes++ ^ hash * 2 ^ hash / 2);
@@ -44,19 +44,18 @@ It also has a good Avalanche Effect property: even a minimal differences (1 bit)
 **Distinct words**: 65503       
 **Data length** = 262012 bytes    
 **Average byte frequency μ** = 1023.48    
-**Minimum byte frequency** = 913   
-**Maximum byte frequency** = 1109    
-**Variance σ<sup>2</sup>** = 1152.33    
-**Standard Deviation σ** = 33.95    
-**Coefficient of Variation <sup>σ</sup>/<sub>μ</sub>** = 3.32%    
-**Chi-Square Test 𝛘<sup>2</sup>** = 288.23   
-**Average bytes value** = 127.21 (127.5 random)   
-**Entropy** = 7.9992 bits (8 random)     
-**Monte Carlo for π 2D** = 3.14876 (error = 0.23%)    
-**Monte Carlo for π 3D** = 3.1420 (error = 0.01%)    
-**Average of Contiguous Byte Pairs** = 32692.38 (32767.5 random) (error 0.23%)     
+**Minimum byte frequency** = 932   
+**Maximum byte frequency** = 1103    
+**Variance σ<sup>2</sup>** = 1008.16    
+**Standard Deviation σ** = 31.75    
+**Coefficient of Variation <sup>σ</sup>/<sub>μ</sub>** = 3.10%    
+**Chi-Square Test 𝛘<sup>2</sup>** = 252.17   
+**Average bytes value** = 127.63 (127.5 random)   
+**Entropy** = 7.9993 bits (8 random)     
+**Monte Carlo for π 2D** = 3.14079 (error = 0.026%)    
+**Monte Carlo for π 3D** = 3.14324 (error = 0.052%)    
+**Average of Contiguous Byte Pairs** = 32801.42 (32767.5 random) (error 0.10%)     
 **4 Bytes Collisions** = 0 (expected collisions = 0.4995)     
-
 
 ## Collision numbers close to expected value
 mzHash32 produces a very low number of collisions for each reasonably large number of distinct values; it is close to the collisions number of a Universal Hash Function.  
