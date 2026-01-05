@@ -4,8 +4,8 @@
  * Strong, fast, simple, non-cryptographic 32-bit hash function
  * 
  * Author: Matteo Zapparoli
- * Date: 2025-06
- * Reelease: 3
+ * Date: 2026-01
+ * Reelease: 5
  *
  * SPDX-FileCopyrightText: 2025 Matteo Zapparoli <zapparoli.matteo@gmail.com>
  * SPDX-License-Identifier: Apache-2.0
@@ -38,3 +38,4 @@ uint32_t mzhash32_str_noseed(const char* str);
 #endif
 
 #endif
+
