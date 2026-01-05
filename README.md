@@ -67,28 +67,28 @@ Data input                                         |   #Vaues    |#Expected Coll
 :---                                               |         ---:|                ---:|       ---:|     ---:|    ---:
 File words_en.txt                                  |      65,503 |         0.5        |          0|        0|       0
 File words_es.txt                                  |      74,571 |         0.6        |          1|        2|       0
-File words_latin.txt                               |      80,007 |         0.7        |          1|        1|       1
-File words_it.txt                                  |     117,558 |         1.6        |          2|        0|       2
+File words_latin.txt                               |      80,007 |         0.7        |          0|        1|       1
+File words_it.txt                                  |     117,558 |         1.6        |          3|        0|       2
 File words_en_es_it_latin.txt                      |     315,198 |        11.6        |         13|        9|       9
 File words_and_numbers.txt                         |     429,187 |        21.4        |         19|       20|      19
-File first_million_primes.txt                      |   1,000,000 |       116.4        |        117|      118|  **85**
-File random_64_signed_nums.txt                     |   1,000,000 |       116.4        |        114|      110|  **143**
-Numbers in english from **"zero"** to **"nine million nine hundred ninety-nine thousand nine hundred ninety-nine"**|10,000,000| 11,633 | 11,432| 11,672 | 11,474
+File first_million_primes.txt                      |   1,000,000 |       116.4        |        118|      118|  **85**
+File random_64_signed_nums.txt                     |   1,000,000 |       116.4        |        115|      110|  **143**
+Numbers in english from **"zero"** to **"nine million nine hundred ninety-nine thousand nine hundred ninety-nine"**|10,000,000| 11,633 | 11,599| 11,672 | 11,474
 File [rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt) dictionary of common passwords|14,344,391|23,927|24,383|24,206|23,895
-Numbers in english from **"five hundred thirty-nine billion four hundred ten million seven hundred one thousand four hundred eighty-three"** to **"five hundred thirty-nine billion four hundred twenty million seven hundred one thousand four hundred eighty-two"** | 10,000,000 | 11,633 | 11,526 | 11,612 | 11,539
-Number as strings from<br>"1234567890123456789" to "1234567890223456788" | 100,000,000 | 1,155,171 | 1,156,308 | 1,155,789|   **808,693**
-Strings from<br>"abcdefg1234567890<br>123456789hijklmn" to "abcdefg1234567890<br>223456788hijklmn" | 100,000,000 | 1,155,171| 1,150,982 | 1,152,600| **1,037,151** 
-Numbers as strings from "0" to "999999"                |1,000,000| 116.4 |100|120|**17**
-Numbers as strings from "aaaa0aaaa" to "aaaa999999aaaa"|1,000,000| 116.4 |104|112|**22**
-Hex numbers as string from "0" to "98967F"| 10,000,000| 11,633| 11,878|11,433|**2,537**
+Numbers in english from **"five hundred thirty-nine billion four hundred ten million seven hundred one thousand four hundred eighty-three"** to **"five hundred thirty-nine billion four hundred twenty million seven hundred one thousand four hundred eighty-two"** | 10,000,000 | 11,633 | 11,588 | 11,612 | 11,539
+Number as strings from<br>"1234567890123456789" to "1234567890223456788" | 100,000,000 | 1,155,171 | 1,153,524 | 1,155,789|   **808,693**
+Strings from<br>"abcdefg1234567890<br>123456789hijklmn" to "abcdefg1234567890<br>223456788hijklmn" | 100,000,000 | 1,155,171| 1,160,384 | 1,152,600| **1,037,151** 
+Numbers as strings from "0" to "999999"                |1,000,000| 116.4 |114|120|**17**
+Numbers as strings from "aaaa0aaaa" to "aaaa999999aaaa"|1,000,000| 116.4 |114|112|**22**
+Hex numbers as string from "0" to "98967F"| 10,000,000| 11,633| 10,772|11,433|**2,537**
 
 #### Number of collisions for binary inputs
 Data input                                         |   #Vaues    |#Expected Collisions|  mzHash32 | Murmur3 |   XX
 :---                                               |         ---:|                ---:|       ---:|     ---:|  ---:
 Binary 32 bytes random                             |  1,000,000  |             116.4  |     133   |   121   |   127 
-Binary 40 bytes [b,b,b,b,b,b,b,b,b,b] b from FF676980 to FFFFFFFF| 10,000,000|11,633|11,615| 11,695| 11,846
-Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 0098967F|10,000,000| 11,633| 11,665 | 11,509| **1,542**
-Binary 24 bytes [b,b\*3,b\*5,b\*7,b\*11,b\*13], b from 00000000 to 0098967F|10,000,000| 11,633| 11,536 | 11,664| 10,831
+Binary 40 bytes [b,b,b,b,b,b,b,b,b,b] b from FF676980 to FFFFFFFF| 10,000,000|11,633|11,539| 11,695| 11,846
+Binary 24 bytes [b,b,b,b,b,b], b from 00000000 to 0098967F|10,000,000| 11,633| 11,531 | 11,509| **1,542**
+Binary 24 bytes [b,b\*3,b\*5,b\*7,b\*11,b\*13], b from 00000000 to 0098967F|10,000,000| 11,633| 11,564 | 11,664| 10,831
 
 Note that the number of collisions of mzHash32 is always very close to the expected value; the same goes for murmur3, while XX sometimes deviates significantly from the expected value (outliers in bold).
 
