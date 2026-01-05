@@ -4,23 +4,23 @@
  * Strong, fast, simple, non-cryptographic 32-bit hash function
  * 
  * Author: Matteo Zapparoli
- * Date: 2025-12
- * Reelease: 4
+ * Date: 2026-01
+ * Reelease: 5
  *
- * SPDX-FileCopyrightText: 2025 Matteo Zapparoli <zapparoli.matteo@gmail.com>
+ * SPDX-FileCopyrightText: 2026 Matteo Zapparoli <zapparoli.matteo@gmail.com>
  * SPDX-License-Identifier: Apache-2.0
  * See LICENSE file in project root.
  * 
  */
-public class HashFunct32 {
+public final class HashFunct32 {
 
 	private HashFunct32() {}
 
 	public static final int mzHash32(byte[] data, int start, int length, int seed) {
-		int hash = 0x032559B1 ^ seed;
+		int hash = 0x514430D1 | seed;
 
 		for(int i = 0; i < length; i++)
-			hash = 0xCF4EDCBF * (data[start + i] ^ (hash << 2) ^ (hash >>> 2));
+			hash = 0x003C50DB * (data[start + i] ^ (hash << 1) ^ (hash >>> 1));
 				
 		return hash;
 	}
@@ -38,95 +38,95 @@ public class HashFunct32 {
 	}
 
 	public static final int mzHash32(byte b, int seed) {
-		int hash = 0x032559B1 ^ seed;
+		int hash = 0x514430D1 | seed;
 		
-		return 0xCF4EDCBF * (b ^ (hash << 2) ^ (hash >>> 2));
+		return 0x003C50DB * (b ^ (hash << 1) ^ (hash >>> 1));
 	}
 
 	public static final int mzHash32(byte b) {
-		return 0xCF4EDCBF * (b ^ 0x0C5C30A8);
+		return 0x003C50DB * (b ^ 0x8A2A79CA);
 	}
 
 	public static final int mzHash32(short s, int seed) {
-		int hash = 0x032559B1 ^ seed;
+		int hash = 0x514430D1 | seed;
 		
-		hash = 0xCF4EDCBF * ((byte)s        ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCF4EDCBF * ((byte)(s >> 8) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0x003C50DB * ((byte)s        ^ (hash << 1) ^ (hash >>> 1));
+		hash = 0x003C50DB * ((byte)(s >> 8) ^ (hash << 1) ^ (hash >>> 1));
 		
 		return hash;
 	}
 
 	public static final int mzHash32(short s) {
-		int hash = 0xCF4EDCBF * ((byte)s ^ 0x0C5C30A8);
+		int hash = 0x003C50DB * ((byte)s ^ 0x8A2A79CA);
 		
-		hash = 0xCF4EDCBF * ((byte)(s >> 8) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0x003C50DB * ((byte)(s >> 8) ^ (hash << 1) ^ (hash >>> 1));
 		
 		return hash;
 	}
 
 	public static final int mzHash32(int i, int seed) {
-		int hash = 0x032559B1 ^ seed;
+		int hash = 0x514430D1 | seed;
 		
-		hash = 0xCF4EDCBF * ((byte)i         ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCF4EDCBF * ((byte)(i >> 8)  ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCF4EDCBF * ((byte)(i >> 16) ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCF4EDCBF * ((byte)(i >> 24) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0x003C50DB * ((byte)i         ^ (hash << 1) ^ (hash >>> 1));
+		hash = 0x003C50DB * ((byte)(i >> 8)  ^ (hash << 1) ^ (hash >>> 1));
+		hash = 0x003C50DB * ((byte)(i >> 16) ^ (hash << 1) ^ (hash >>> 1));
+		hash = 0x003C50DB * ((byte)(i >> 24) ^ (hash << 1) ^ (hash >>> 1));
 		
 		return hash;
 	}
 
 	public static final int mzHash32(int i) {
-		int hash = 0xCF4EDCBF * ((byte)i ^ 0x0C5C30A8);
+		int hash = 0x003C50DB * ((byte)i ^ 0x8A2A79CA);
 		
-		hash = 0xCF4EDCBF * ((byte)(i >> 8)  ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCF4EDCBF * ((byte)(i >> 16) ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCF4EDCBF * ((byte)(i >> 24) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0x003C50DB * ((byte)(i >> 8)  ^ (hash << 1) ^ (hash >>> 1));
+		hash = 0x003C50DB * ((byte)(i >> 16) ^ (hash << 1) ^ (hash >>> 1));
+		hash = 0x003C50DB * ((byte)(i >> 24) ^ (hash << 1) ^ (hash >>> 1));
 		
 		return hash;
 	}
 
 	public static final int mzHash32(long l, int seed) {
-		int hash = 0x032559B1 ^ seed;
+		int hash = 0x514430D1 | seed;
 		
-		hash = 0xCF4EDCBF * ((byte)l         ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCF4EDCBF * ((byte)(l >> 8)  ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCF4EDCBF * ((byte)(l >> 16) ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCF4EDCBF * ((byte)(l >> 24) ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCF4EDCBF * ((byte)(l >> 32) ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCF4EDCBF * ((byte)(l >> 40) ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCF4EDCBF * ((byte)(l >> 48) ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCF4EDCBF * ((byte)(l >> 56) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0x003C50DB * ((byte)l         ^ (hash << 1) ^ (hash >>> 1));
+		hash = 0x003C50DB * ((byte)(l >> 8)  ^ (hash << 1) ^ (hash >>> 1));
+		hash = 0x003C50DB * ((byte)(l >> 16) ^ (hash << 1) ^ (hash >>> 1));
+		hash = 0x003C50DB * ((byte)(l >> 24) ^ (hash << 1) ^ (hash >>> 1));
+		hash = 0x003C50DB * ((byte)(l >> 32) ^ (hash << 1) ^ (hash >>> 1));
+		hash = 0x003C50DB * ((byte)(l >> 40) ^ (hash << 1) ^ (hash >>> 1));
+		hash = 0x003C50DB * ((byte)(l >> 48) ^ (hash << 1) ^ (hash >>> 1));
+		hash = 0x003C50DB * ((byte)(l >> 56) ^ (hash << 1) ^ (hash >>> 1));
 		
 		return hash;
 	}
 
 	public static final int mzHash32(long l) {
-	    int hash = 0xCF4EDCBF * ((byte)l ^ 0x0C5C30A8);
+	    int hash = 0x003C50DB * ((byte)l ^ 0x8A2A79CA);
 		
-	    hash = 0xCF4EDCBF * ((byte)(l >> 8)  ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xCF4EDCBF * ((byte)(l >> 16) ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xCF4EDCBF * ((byte)(l >> 24) ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xCF4EDCBF * ((byte)(l >> 32) ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xCF4EDCBF * ((byte)(l >> 40) ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xCF4EDCBF * ((byte)(l >> 48) ^ (hash << 2) ^ (hash >>> 2));
-        hash = 0xCF4EDCBF * ((byte)(l >> 56) ^ (hash << 2) ^ (hash >>> 2));
+	    hash = 0x003C50DB * ((byte)(l >> 8)  ^ (hash << 1) ^ (hash >>> 1));
+        hash = 0x003C50DB * ((byte)(l >> 16) ^ (hash << 1) ^ (hash >>> 1));
+        hash = 0x003C50DB * ((byte)(l >> 24) ^ (hash << 1) ^ (hash >>> 1));
+        hash = 0x003C50DB * ((byte)(l >> 32) ^ (hash << 1) ^ (hash >>> 1));
+        hash = 0x003C50DB * ((byte)(l >> 40) ^ (hash << 1) ^ (hash >>> 1));
+        hash = 0x003C50DB * ((byte)(l >> 48) ^ (hash << 1) ^ (hash >>> 1));
+        hash = 0x003C50DB * ((byte)(l >> 56) ^ (hash << 1) ^ (hash >>> 1));
 		
 		return hash;
 	}
 
 	public static final int mzHash32(char c, int seed) {
-		int hash = 0x032559B1 ^ seed;
+		int hash = 0x514430D1 | seed;
 		
-		hash = 0xCF4EDCBF * ((byte)c        ^ (hash << 2) ^ (hash >>> 2));
-		hash = 0xCF4EDCBF * ((byte)(c >> 8) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0x003C50DB * ((byte)c        ^ (hash << 1) ^ (hash >>> 1));
+		hash = 0x003C50DB * ((byte)(c >> 8) ^ (hash << 1) ^ (hash >>> 1));
 		
 		return hash;
 	}
 
 	public static final int mzHash32(char c) {
-		int hash = 0xCF4EDCBF * ((byte)c ^ 0x0C5C30A8);
+		int hash = 0x003C50DB * ((byte)c ^ 0x8A2A79CA);
 		
-		hash = 0xCF4EDCBF * ((byte)(c >> 8) ^ (hash << 2) ^ (hash >>> 2));
+		hash = 0x003C50DB * ((byte)(c >> 8) ^ (hash << 1) ^ (hash >>> 1));
 		
 		return hash;
 	}
@@ -144,9 +144,9 @@ public class HashFunct32 {
 	}
 
 	public static final int mzHash32(boolean b) {
-		return b ? 0x5B936D06 : 0x2E45E657;
+		return b ? 0x33E32857 : 0xF06DF603;
 	}
-	
+
 }
 
 
