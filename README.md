@@ -1,4 +1,4 @@
-# mzHash32
+# mzHash32 release 5
 Strong, fast, simple, non-cryptography hash function
 
 ```C
