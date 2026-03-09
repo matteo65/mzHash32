@@ -8,7 +8,7 @@ uint32_t mzhash32(const void* data, size_t length, uint32_t seed)
 	uint32_t hash = 0x514430D1 ^ seed;
 
 	while(length--)
-		hash = 0x003C50DB * (*bytes++ ^ hash * 2 ^ hash / 2);
+		hash = 0x003C50DB * (*bytes++ ^ (hash * 2) ^ (hash / 2));
 
 	return hash;
 }
